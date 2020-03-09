@@ -5,6 +5,7 @@ export default class ErrorHandler extends Component {
         return (
             <div>
                 Something went wrong.....
+                {this.props.info}
                 {/* <p>{this.props.info}</p> */}
             </div>
         )
