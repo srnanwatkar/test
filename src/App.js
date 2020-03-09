@@ -31,7 +31,12 @@ class App extends Component {
     return (
       <div className='app-container'>
         {
-          this.state.error ? <ErrorHandler error={this.state.error} info={this.state.info} /> :
+          this.state.error ?
+            <div>
+              Something went wrong.....
+                {this.state.info} : {this.state.error}
+              {/* <p>{this.props.info}</p> */}
+            </div> :
             <Fragment>
               {/* Loader */}
               <Loader />
