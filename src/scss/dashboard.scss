@@ -1,0 +1,97 @@
+@import "./colors.scss";
+
+.dashboard-container {
+  padding: 40px 60px;
+
+  .heading-container {
+    display: flex;
+    justify-content: center;
+  }
+
+  .stock-header {
+    font-weight: 600;
+  }
+
+  /* Name, Value */
+  .stock-name,
+  .stock-value {
+    width: 120px;
+  }
+
+  /* Last Updated, Plot */
+  .stock-updated,
+  .stock-plot {
+    width: 200px;
+  }
+
+  table {
+    border: 1px solid $BOX_BORDER;
+    border-spacing: 0;
+    border-radius: 4px;
+    margin: 0 auto;
+    tr {
+      cursor: pointer;
+    }
+    td {
+      padding: 6px;
+    }
+    thead {
+      font-size: 16px;
+      tr {
+        border: 1px solid $BOX_BORDER;
+      }
+    }
+  }
+
+  /* Tbody Container */
+  .row-container {
+    &:nth-child(even) {
+      background: #eaeaea;
+    }
+
+    .stock-down {
+      color: $RED;
+      border-top-color: $RED;
+    }
+    .stock-up {
+      color: $GREEN;
+      border-bottom-color: $GREEN;
+    }
+
+    /* Stock Value container */
+    .value-container {
+      display: flex;
+      .stock-up {
+        position: relative;
+        top: -2px;
+      }
+      .stock-down {
+        position: relative;
+        bottom: -10px;
+      }
+    }
+  }
+}
+
+/* Caret */
+/* Styles for caret icons */
+.caret {
+  width: 0;
+  height: 0;
+  display: inline-block;
+  border: 7px solid transparent;
+  margin-right: 6px;
+}
+
+.stock-down {
+  color: $RED;
+  border-top-color: $RED;
+  position: relative;
+  top: 5px;
+}
+.stock-up {
+  color: $GREEN;
+  border-bottom-color: $GREEN;
+  position: relative;
+  top: -2px;
+}
